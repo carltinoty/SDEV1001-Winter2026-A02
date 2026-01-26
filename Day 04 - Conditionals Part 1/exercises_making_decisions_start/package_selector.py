@@ -21,28 +21,25 @@ print()
 #You have selected Package A
 #Your monthly fee is $40
 #Your total fee is $160
-package_choice= input("Enter the package letter (A/B/C/D): ")
-if package_choice == "A":
-        A= 40
-        print("You have selected Package A")
-        print(f"Your monthly fee is ${A}")
-        print(f"Your total fee is ${A * 4}")
-elif package_choice == "B":
-        B= 55
-        print("You have selected Package B")
-        print(f"Your monthly fee is ${B}")
-        print(f"Your total fee is ${B * 8}")
-elif package_choice == "C":
-        C= 75
-        print("You have selected Package C")
-        print(f"Your monthly fee is ${C}")
-        print(f"Your total fee is ${C * 12}")
-elif package_choice == "D":
-        D= 100
-        print("You have selected Package D")
-        print(f"Your monthly fee is ${D}")
-        print(f"Your total fee is ${D * 12}")
-else:
-        print("ERROR")
-    
+package_choice= input("Enter the package letter (A/B/C/D): ").upper()
+match package_choice:
+        case "A":
+            permonth= 40 
+            month = 4 
+        case "B":
+            permonth = 55
+            month = 8
+        case "C":
+            permonth = 75
+            month = 12
+        case "D":
+            permonth = 100
+            month = 12
+        case _:
+            print("ERROR")
 
+total_per_year= permonth * month
+print(f"You have selected Package {package_choice}")
+print(f"Your monthly fee is ${permonth}")
+print(f"Your total fee is ${total_per_year}")
+    
