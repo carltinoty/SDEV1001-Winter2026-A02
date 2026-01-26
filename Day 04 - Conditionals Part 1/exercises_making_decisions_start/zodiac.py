@@ -14,29 +14,31 @@
 year= int(input("Enter a year:"))
 zodiac= (year - 1900) % 12
 
-if zodiac == 0:
-    print("Rat")
-elif zodiac == 1:
-    print("Ox")
-elif zodiac == 2:
-    print("Tiger")
-elif zodiac == 3:
-    print("Rabbit")
-elif zodiac == 4:
-    print("Dragon")
-elif zodiac == 5:
-    print("Snake")
-elif zodiac == 6:
-    print("Horse")
-elif zodiac == 7:
-    print("Sheep")
-elif zodiac == 8:
-    print("Monkey")
-elif zodiac == 9:
-    print("Rooster")
-elif zodiac == 10:
-    print("Dog")
-elif zodiac == 11:
-    print("Pig")
-else:
-    print("ERROR")
+match zodiac:
+    case 0:
+        print("Rat")
+    case 1:
+        print("Ox")
+    case 2:
+        print("Tiger")
+    case 3:
+        print("Rabbit")
+    case 4:
+        print("Dragon")
+    case 5:
+        print("Snake")
+    case 6:
+        print("Horse")
+    case 7:
+        print("Sheep")
+    case 8:
+        print("Monkey")
+    case 9:
+        print("Rooster")
+    case 10:
+        print("Dog")
+    case 11:
+        print("Pig")
+    case _:
+        print("ERROR")
+ 
